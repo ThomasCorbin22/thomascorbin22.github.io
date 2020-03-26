@@ -273,6 +273,10 @@ textarea {
     box-sizing: border-box;
 }
 
+body{
+        overflow-x:hidden;
+    }
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -280,10 +284,14 @@ nav{
     min-height: 8vh;
     background-color: #282e34;
     font-family: 'Poppins', sans-serif;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    z-index: 99999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+h2 {
+  padding-bottom: 20px;
 }
 
 h5 {
@@ -344,7 +352,6 @@ h5 {
     position: absolute;
     top: 50%;
     right: 5%;
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -363,9 +370,6 @@ h5 {
 }
 
 @media screen and (max-width: 1024px){
-    body{
-        overflow-x:hidden;
-    }
     .nav-links{
         position: absolute;
         right: 0px;
@@ -437,12 +441,6 @@ body, html{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  /*
-      fixed = parallax
-      scroll = normal
-  */
-
   background-attachment: fixed;
 }
 
@@ -452,8 +450,9 @@ body, html{
 }
 
 .pimg2{
-  background-image: url('../img/old/hubble-02.jpg');
+  background-image: url('../img/hobbies-front/AJH-NB-20180122-008-001-0002-JCAM02.jpg');
   min-height: 50%;
+  background-position: top;
 }
 
 .pimg3{
@@ -481,18 +480,16 @@ body, html{
   min-height: 100%;
 }
 
+
+@media(max-width: 568px){
+  .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
+      background-attachment: scroll
+  }
+}
+
 .section{
   text-align: center;
   padding: 50px 80px;
-  height: 50%;
-}
-
-.section-full{
-  min-height: 100%;
-}
-
-.section-half{
-  min-height: 50%;
 }
 
 .section-light{
@@ -503,24 +500,6 @@ body, html{
 .section-dark{
   background-color: #282e34;
   color: #ddd;
-}
-
-.welcomeImg-hidden{
-  object-fit: cover;
-  width: 350px;
-  height: 350px;
-  padding: 25px;
-  transform: translateX(-100vw);
-  transition: all 1.5s ease-out;
-}
-
-.welcomeImg-inter{
-  transform: translateX(10vw)
-}
-
-.welcomeImg-final{
-  transition: all .5s ease-in-out;
-  transform: translateX(-100vw)
 }
 
 .ptext{
@@ -544,35 +523,35 @@ body, html{
   background-color: transparent;
 }
 
-@media(max-width: 568px){
-  .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
-      background-attachment: scroll
-  }
-}
-
 .carousel-item {
   height: 100vh;
   min-height: 300px;
-  background: no-repeat center center scroll;
+  background: no-repeat center scroll;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #carousel-img1{
   background-image: url(../img/welcome-carousel/DSC_0261.JPG);
-  background-attachment: fixed;
 }
 
 #carousel-img2{
   background-image: url(../img/welcome-carousel/us.jpg);
-  background-attachment: fixed;
 }
 
 #carousel-img3{
   background-image: url(../img/welcome-carousel/81606594_10156523291225064_6816703669640101888_o.jpg);
-  background-attachment: fixed;
 }
 
-.color-overlay-initial{
+.carousel-background-color{
+  width: 100%;
+  height: 100%;
+  background: #282e34;
+  position: absolute;
+  z-index: 0;
+}
+
+.carousel-overlay-initial{
   width: 100%;
   height: 100%;
   background: black;
@@ -582,7 +561,7 @@ body, html{
   transition: all 1.5s ease-in-out;
 }
 
-.color-overlay{
+.carousel-overlay-regular{
   width: 100%;
   height: 100%;
   background: black;
@@ -619,13 +598,269 @@ header p{
   transition-delay: 2.5s;
 }
 
+
 .welcome-text-hidden{
+  margin-left: auto;
+  margin-right: auto;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(15px);
   transition: 1s all ease-in;
 }
 
-.welcome-text-appear{
+.welcome-text-active{
   opacity: 1;
   transform: translateY(0px);
+}
+
+.welcome-inline{
+  display: inline-block;
+  margin: auto;
+}
+
+.welcome-img-hidden{
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
+  padding: 25px;
+  transform: translateX(-100vw);
+  transition: all ease-out;
+  transition-duration: 1.5s;
+}
+
+.welcome-img-top{
+  object-position: 0 0;
+}
+
+.welcome-img-inter{
+  transform: translateX(.5vw)
+}
+
+.welcome-img-active{
+  transition-duration: .5s;
+  transform: translateX(0vw)
+}
+
+.welcome-img-active:hover{
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in;
+}
+
+.hobbies-img-hidden{
+  position: relative;
+  object-fit: cover;
+  width: 95%;
+  padding: 0px;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%); 
+  transition: all 1s ease-in;
+}
+
+.hobbies-img-active{
+  height: 100%;
+  max-height: 50vw;
+  opacity: 1;
+}
+
+.hobbies-img-active:hover{
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in;
+  cursor: pointer;
+}
+
+.left-justified{
+  text-align: left;
+}
+
+.padding-30{
+  padding: 0px 30px !important;
+}
+
+#hobbies-unordered-list{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style-position:inside;
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.hobbies-list-item-hidden{
+  padding: .5vw 0vw .5vw 8vw;
+  background-position: 0 0;
+  background-size: 5vw;
+  background-position-y: 2vw;
+  background-repeat: no-repeat;
+  transform: translateX(100vw);
+  transition: 1.5s all ease-out;
+}
+
+.hobbies-list-item-inter{
+  transform: translateX(-1vw);
+}
+
+.hobbies-list-item-active{
+  transform: translateX(0vw);
+  transition: .5s all ease-out;
+}
+
+h4{
+  font-size: 2vw !important;
+}
+
+li p {
+  font-size: 1vw !important;
+}
+
+@media(max-width: 767px){
+  .hobbies-list-item-hidden{
+    padding: 1vw 0vw 1vw 16vw;
+    background-position: 0 0;
+    background-size: 10vw;
+    background-position-y: 4vw;
+  }
+  h4{
+    font-size: 4vw !important;
+  }
+  
+  li > p {
+    font-size: 2vw !important;
+  }
+}
+
+#hobbies-frisbee{
+  background-image: url(../img/hobbies-section/icon1-01.png);
+}
+
+#hobbies-photography{
+  background-image: url(../img/hobbies-section/icon2-01.png);
+}
+
+#hobbies-running{
+  background-image: url(../img/hobbies-section/icon3-01.png);
+}
+
+#hobbies-adventure-sports{
+  background-image: url(../img/hobbies-section/icon4-01.png);
+}
+
+#hobbies-popup-splatter img{
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#hobbies-popup-splatter-01{
+  display: none;
+  top: 70%;
+  left: 30%;
+}
+
+#hobbies-popup-splatter-02{
+  display: none;
+  top: 90%;
+  left: 70%;
+}
+
+#hobbies-popup-splatter-03{
+  display: none;
+  top: 30%;
+  left: 15%;
+}
+
+#hobbies-popup-splatter-04{
+  display: none;
+  top: 10%;
+  left: 80%;
+}
+
+#hobbies-popup-splatter-05{
+  display: none;
+  top: 50%;
+  left: 50%;
+}
+
+#hobbies-popup-splatter-06{
+  display: none;
+  top: 85%;
+  left: 10%;
+}
+
+#hobbies-popup-splatter-07{
+  display: none;
+  top: 10%;
+  left: 50%;
+}
+
+#hobbies-popup-splatter-08{
+  display: none;
+  top: 80%;
+  left: 90%;
+}
+
+#hobbies-popup-black{
+  /* display: none; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 101;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.exit{
+  /* display: none; */
+  cursor: pointer;
+  margin: 0;
+  position: fixed;
+  top: 4%;
+  right: 4.5%;
+  transform: translateY(-50%);
+  z-index: 102;
+}
+
+.exit div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+}
+
+.exit-line1{
+  transform: rotate(-45deg) translate(-5px, 0px);
+}
+
+.exit-line2{
+  transform: rotate(45deg) translate(-5px, 0px);
+}
+
+.hobbies-popup-img{
+  position: fixed;
+  left: 10%;
+  top: 15%;
+  width: 80vw;
+  height: 70vh;
+  z-index: 102;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hobbies-popup-img-line{
+  margin: auto !important;
+}
+
+.hobbies-popup-img-line img{
+  object-fit: cover;
+  width: 15vw;
+  height: 15vw;
+  padding: 1vw;
+  opacity: 1;
+}
+
+.hobbies-popup-img-line img:hover{
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in;
+  cursor: pointer;
 }
