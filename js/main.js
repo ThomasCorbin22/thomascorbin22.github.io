@@ -126,8 +126,78 @@ function setDivHeight(){
 
 setDivHeight();
 window.addEventListener('resize', setDivHeight);
-window.addEventListener('minimized', setDivHeight);
+window.addEventListener('focus', setDivHeight);
 
-function splatterTime(){
-    let splatterParent = document.getElementsByClassName("hobbies-splatter-parent")
+function splatterTimeOpen(){
+    let splatterBlack = document.querySelector(".hobbies-popup-splatter");
+    let splatterBlackPngs = document.querySelectorAll(".hobbies-popup-splatter img")
+
+    let galleryImg = document.querySelector(".hobbies-popup-img")
+    let galleryImgJpgs = document.querySelectorAll(".hobbies-popup-img-line img")
+
+    let clickImg = document.querySelector(".hobbies-img-hidden")
+    let clickExit = document.querySelector(".exit")
+    let backgroundBlack = document.querySelector(".hobbies-popup-black")
+    let delayAmount = 250;
+
+
+    clickImg.addEventListener('click', () => {
+        splatterBlack.classList.toggle('toggleClipPath');
+        galleryImg.classList.toggle('toggleClipPath');
+        
+        for (let i = 1; i < splatterBlackPngs.length + 1; i++){
+            setTimeout(function(){
+                splatterBlackPngs[i - 1].classList.toggle('toggleOpacity')
+            }, i * delayAmount);
+        }
+        setTimeout(function(){
+            backgroundBlack.classList.toggle('toggleOpacity');
+            clickExit.classList.toggle('toggleOpacity');
+        }, (splatterBlackPngs.length * delayAmount) + delayAmount);
+
+        for (let j = 1; j < galleryImgJpgs.length + 1; j++){
+            setTimeout(function(){
+                galleryImgJpgs[j - 1].classList.toggle('toggleOpacity');
+            }, (j * delayAmount) + ((splatterBlackPngs.length + 1) * delayAmount));
+        }
+    });
 }
+
+function splatterTimeClose(){
+    let splatterBlack = document.querySelector(".hobbies-popup-splatter");
+    let splatterBlackPngs = document.querySelectorAll(".hobbies-popup-splatter img")
+
+    let galleryImg = document.querySelector(".hobbies-popup-img")
+    let galleryImgJpgs = document.querySelectorAll(".hobbies-popup-img-line img")
+
+    // let clickImg = document.querySelector(".hobbies-img-hidden")
+    let clickExit = document.querySelector(".exit")
+    let backgroundBlack = document.querySelector(".hobbies-popup-black")
+    let delayAmount = 250;
+
+    clickExit.addEventListener('click', () => {
+        for (let j = 1; j < galleryImgJpgs.length + 1; j++){
+            setTimeout(function(){
+                galleryImgJpgs[galleryImgJpgs.length - j].classList.toggle('toggleOpacity');
+            }, j * delayAmount);
+        }
+
+        setTimeout(function(){
+            backgroundBlack.classList.toggle('toggleOpacity');
+            clickExit.classList.toggle('toggleOpacity');
+        }, (galleryImgJpgs.length * delayAmount) + delayAmount);
+
+        for (let i = 1; i < splatterBlackPngs.length + 1; i++){
+            setTimeout(function(){
+                splatterBlackPngs[splatterBlackPngs.length - i].classList.toggle('toggleOpacity')
+            }, (i * delayAmount) + ((galleryImgJpgs.length + 1) * delayAmount));
+        }
+        setTimeout(function(){
+            galleryImg.classList.toggle('toggleClipPath');
+            splatterBlack.classList.toggle('toggleClipPath');
+        }, (splatterBlackPngs.length * delayAmount) + ((galleryImgJpgs.length + 2) * delayAmount));
+    });
+}
+
+splatterTimeOpen()
+splatterTimeClose()
