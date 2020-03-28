@@ -264,8 +264,9 @@ textarea {
 }
 
  /*
-     Nav-bar
+     Global
      */
+
 
 *{
     margin: 0px;
@@ -276,6 +277,103 @@ textarea {
 body{
         overflow-x:hidden;
     }
+
+body, html{
+  height: 100%;
+  margin: 0;
+  font: size 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666
+}
+
+.pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg1{
+  background-image: url('../img/old/hubble-01.jpg');
+  min-height: 100%;
+}
+
+.pimg2{
+  background-image: url('../img/hobbies-front/AJH-NB-20180122-008-001-0002-JCAM02.jpg');
+  min-height: 100%;
+  background-position: top;
+}
+
+.pimg3{
+  background-image: url('../img/architecture/Section\ -\ Perspective.jpg');
+  min-height: 100%;
+}
+
+.pimg4{
+  background-image: url('../img/old/hubble-03.jpg');
+  min-height: 100%;
+}
+
+.pimg5{
+  background-image: url('../img/old/hubble-03.jpg');
+  min-height: 100%;
+}
+
+.pimg6{
+  background-image: url('../img/old/hubble-03.jpg');
+  min-height: 100%;
+}
+
+.pimg7{
+  background-image: url('../img/old/hubble-01.jpg');
+  min-height: 100%;
+}
+
+.section{
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light{
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-dark{
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.ptext{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border{
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.ptext .border.trans{
+  background-color: transparent;
+}
+
+
+ /*
+     Nav-bar
+     */
+
 
 nav{
     display: flex;
@@ -363,50 +461,8 @@ h5 {
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1336px){
-    .nav-links a{
-        letter-spacing: 2px;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    .nav-links{
-        position: absolute;
-        right: 0px;
-        top: 8vh;
-        height: 92vh;
-        background-color: #282e34;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform ease-in;
-        transition-duration: 0s;
-    }
-
-    .nav-links li{
-        opacity: 0;
-    }
-
-    .burger{
-        display: block;
-    }
-}
-
 .nav-active{
   transform: translateX(0%);    
-}
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity: 1;
-        transform: translate(0px);
-    }
 }
 
 .toggle .line1{
@@ -421,107 +477,7 @@ h5 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
- /*
-     Scroll
-     */
-
-body, html{
-  height: 100%;
-  margin: 0;
-  font: size 16px;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.8em;
-  color: #666
-}
-
-.pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
-  position: relative;
-  opacity: 0.70;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.pimg1{
-  background-image: url('../img/old/hubble-01.jpg');
-  min-height: 100%;
-}
-
-.pimg2{
-  background-image: url('../img/hobbies-front/AJH-NB-20180122-008-001-0002-JCAM02.jpg');
-  min-height: 50%;
-  background-position: top;
-}
-
-.pimg3{
-  background-image: url('../img/old/hubble-03.jpg');
-  min-height: 50%;
-}
-
-.pimg4{
-  background-image: url('../img/old/hubble-03.jpg');
-  min-height: 50%;
-}
-
-.pimg5{
-  background-image: url('../img/old/hubble-03.jpg');
-  min-height: 50%;
-}
-
-.pimg6{
-  background-image: url('../img/old/hubble-03.jpg');
-  min-height: 50%;
-}
-
-.pimg7{
-  background-image: url('../img/old/hubble-01.jpg');
-  min-height: 100%;
-}
-
-
-@media(max-width: 568px){
-  .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
-      background-attachment: scroll
-  }
-}
-
-.section{
-  text-align: center;
-  padding: 50px 80px;
-}
-
-.section-light{
-  background-color: #f4f4f4;
-  color: #666;
-}
-
-.section-dark{
-  background-color: #282e34;
-  color: #ddd;
-}
-
-.ptext{
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  font-size: 27px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-}
-
-.ptext .border{
-  background-color: #111;
-  color: #fff;
-  padding: 20px;
-}
-
-.ptext .border.trans{
-  background-color: transparent;
-}
+/* Welcome */
 
 .carousel-item {
   height: 100vh;
@@ -598,8 +554,9 @@ header p{
   transition-delay: 2.5s;
 }
 
+/* About-Me Section */
 
-.welcome-text-hidden{
+.text-hidden{
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
@@ -607,9 +564,9 @@ header p{
   transition: 1s all ease-in;
 }
 
-.welcome-text-active{
+.text-active{
   opacity: 1;
-  transform: translateY(0px);
+  transform: none;
 }
 
 .welcome-inline{
@@ -633,7 +590,7 @@ header p{
 
 .welcome-img-active{
   transition-duration: .5s;
-  transform: translateX(0vw)
+  transform: none;
 }
 
 .welcome-img-top{
@@ -644,6 +601,8 @@ header p{
   opacity: 0.5;
   transition: opacity 0.2s ease-in;
 }
+
+/* Hobbies Section */
 
 .hobbies-img-hidden{
   position: relative;
@@ -674,8 +633,12 @@ header p{
   text-align: left;
 }
 
-.padding-30{
+.padding-left-right-30{
   padding: 0px 30px !important;
+}
+
+.padding-bottom-30{
+  padding-bottom: 30px !important;
 }
 
 #hobbies-unordered-list{
@@ -702,8 +665,8 @@ header p{
 }
 
 .hobbies-list-item-active{
-  transform: translateX(0vw);
-  transition: .5s all ease-out;
+    transition: .5s;
+    transform: none;
 }
 
 h4{
@@ -712,22 +675,6 @@ h4{
 
 li p {
   font-size: 1vw !important;
-}
-
-@media(max-width: 767px){
-  .hobbies-list-item-hidden{
-    padding: 1vw 0vw 1vw 16vw;
-    background-position: 0 0;
-    background-size: 10vw;
-    background-position-y: 4vw;
-  }
-  h4{
-    font-size: 4vw !important;
-  }
-  
-  li > p {
-    font-size: 2vw !important;
-  }
 }
 
 #hobbies-frisbee{
@@ -880,4 +827,136 @@ li p {
 
 .hobbies-popup-img-line .toggleOpacity{
   opacity: 1;
+}
+
+/* Architecture Section */
+
+.architecture-img-large-hidden{
+  object-fit: cover;
+  width: 100%;
+  height: 30vw;
+  padding: 5px;
+  transform: translateX(100vw);
+  transition: all ease-out;
+  transition-duration: 1.5s;
+}
+
+.architecture-img-large-inter{
+  transform: translateX(-.5vw)
+}
+
+.architecture-img-large-active{
+  transition-duration: .5s;
+  transform: none;
+}
+
+.architecture-row-small{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.architecture-img-small-hidden{
+  object-fit: cover;
+  width: 20%;
+  height: 10vw;
+  padding: 5px;
+  transform: translateX(100vw);
+  transition: all ease-out;
+  transition-duration: 1.5s;
+}
+
+.architecture-img-small-inter{
+  transform: translateX(-.5vw)
+}
+
+.architecture-img-small-active{
+  transition-duration: .5s;
+  transform: none;
+}
+
+.architecture-img-small-active:hover{
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in;
+}
+
+.architecture-title{
+  margin-left: 0 !important;
+  height: 3em;
+}
+
+.padding-right-30{
+  padding-right: 30px
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1336px){
+  .nav-links a{
+      letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .nav-links{
+      position: absolute;
+      right: 0px;
+      top: 8vh;
+      height: 92vh;
+      background-color: #282e34;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform ease-in;
+      transition-duration: 0s;
+  }
+
+  .nav-links li{
+      opacity: 0;
+  }
+
+  .burger{
+      display: block;
+  }
+}
+
+@media(max-width: 991px){
+  .hobbies-list-item-hidden{
+    padding: 1vw 0vw 1vw 16vw;
+    background-position: 0 0;
+    background-size: 10vw;
+    background-position-y: 4vw;
+  }
+  h4{
+    font-size: 4vw !important;
+  }
+  
+  li > p {
+    font-size: 2vw !important;
+  }
+}
+
+
+@media(max-width: 568px){
+  .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
+      background-attachment: scroll
+  }
+  .welcome-img-hidden{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes navLinkFade{
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to{
+      opacity: 1;
+      transform: translate(0px);
+  }
 }

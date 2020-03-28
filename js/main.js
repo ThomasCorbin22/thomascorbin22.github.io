@@ -49,8 +49,8 @@ window.onload = function() {
     changeOpacity("header > div > p", 1); 
 }
 
-function scrollAppear(){
-    const welcomeText = document.getElementsByClassName("welcome-text-hidden");
+function scrollAppear(inputHidden, inputActive){
+    const welcomeText = document.getElementsByClassName(inputHidden);
 
     for (let element of welcomeText){
     
@@ -58,12 +58,16 @@ function scrollAppear(){
         let screenPosition = window.innerHeight;
 
         if (introPosition < screenPosition / 1.5){        
-            element.classList.add("welcome-text-active");
+            element.classList.add(inputActive);
         } 
     }
 }
 
-window.addEventListener('scroll', scrollAppear);
+function scrollAppearWelcome(){
+    scrollAppear("text-hidden", "text-active")
+}
+
+window.addEventListener('scroll', scrollAppearWelcome);
 
 function scrollSlide(start, inter, end){
     const scrollImg = document.getElementsByClassName(start);
@@ -83,6 +87,24 @@ function scrollSlide(start, inter, end){
     }
 }
 
+function scrollSlideReverse(start, inter, end){
+    const scrollImg = document.getElementsByClassName(start);
+    
+    let introPosition = scrollImg[0].getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
+
+    if (introPosition < screenPosition / 1){ 
+        for (let i = 1; i < scrollImg.length + 1; i++) {
+            setTimeout(function(){
+                scrollImg[i - 1].classList.add(inter);
+           }, i * 250 + 250);
+            setTimeout(function(){
+                scrollImg[i - 1].classList.add(end);
+           }, i * 250 + 1750);
+        }
+    }
+}
+
 function scrollSlideWelcome() {
     scrollSlide("welcome-img-hidden", "welcome-img-inter", "welcome-img-active")
 }
@@ -91,8 +113,19 @@ function scrollSlideHobbies() {
     scrollSlide("hobbies-list-item-hidden", "hobbies-list-item-inter", "hobbies-list-item-active")
 }
 
+function scrollSlideArchitectureLarge() {
+    scrollSlide("architecture-img-large-hidden", "architecture-img-large-inter", "architecture-img-large-active")
+}
+
+function scrollSlideArchitectureSmall() {
+    scrollSlideReverse("architecture-img-small-hidden", "architecture-img-small-inter", "architecture-img-small-active")
+}
+
 window.addEventListener('scroll', scrollSlideWelcome);
 window.addEventListener('scroll', scrollSlideHobbies);
+window.addEventListener('scroll', scrollSlideArchitectureLarge);
+window.addEventListener('scroll', scrollSlideArchitectureSmall);
+
 
 function scrollGrow(start, end){
     const hobbiesImg = document.getElementsByClassName(start);
@@ -170,7 +203,6 @@ function splatterTimeClose(){
     let galleryImg = document.querySelector(".hobbies-popup-img")
     let galleryImgJpgs = document.querySelectorAll(".hobbies-popup-img-line img")
 
-    // let clickImg = document.querySelector(".hobbies-img-hidden")
     let clickExit = document.querySelector(".exit")
     let backgroundBlack = document.querySelector(".hobbies-popup-black")
     let delayAmount = 250;
@@ -201,3 +233,42 @@ function splatterTimeClose(){
 
 splatterTimeOpen()
 splatterTimeClose()
+
+function clickChange(title, para1, para2, inputSmallImg){
+    let ptag = document.getElementsByClassName("architecture-text-change");
+    let smallImg = document.getElementById(inputSmallImg)
+    let largeImg = document.getElementsByClassName("architecture-img-large-hidden");
+    
+
+    smallImg.addEventListener('click', () => {
+        ptag[0].innerHTML = title;
+        ptag[1].innerHTML = para1;
+        ptag[2].innerHTML = para2;
+
+        largeImg[0].src = smallImg.src;
+    });
+}
+
+let architectureTitle1 = "Sentosa-Brani Masterplan"
+let architectureTitle2 = "Shenzhen Bay Avenue East Extension"
+let architectureTitle3 = "HKIA Sky Bridge"
+let architectureTitle4 = "26-32 High Street, Esher"
+let architectureTitle5 = "New Road, Esher"
+
+let architecturePara1a = "Image 1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex possimus ipsam impedit perspiciatis magni repudiandae sed, cumque recusandae iure inventore, quaerat tempore explicabo architecto eos unde quo ipsa ullam. Incidunt sint, officiis accusamus aperiam soluta commodi id! Illum, libero hic tempora consequatur, reiciendis quae itaque ducimus soluta tenetur animi, iure quam maxime quod."
+let architecturePara2a = "Image 2 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex possimus ipsam impedit perspiciatis magni repudiandae sed, cumque recusandae iure inventore, quaerat tempore explicabo architecto eos unde quo ipsa ullam. Incidunt sint, officiis accusamus aperiam soluta commodi id! Illum, libero hic tempora consequatur, reiciendis quae itaque ducimus soluta tenetur animi, iure quam maxime quod."
+let architecturePara3a = "Image 3 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex possimus ipsam impedit perspiciatis magni repudiandae sed, cumque recusandae iure inventore, quaerat tempore explicabo architecto eos unde quo ipsa ullam. Incidunt sint, officiis accusamus aperiam soluta commodi id! Illum, libero hic tempora consequatur, reiciendis quae itaque ducimus soluta tenetur animi, iure quam maxime quod."
+let architecturePara4a = "Image 4 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex possimus ipsam impedit perspiciatis magni repudiandae sed, cumque recusandae iure inventore, quaerat tempore explicabo architecto eos unde quo ipsa ullam. Incidunt sint, officiis accusamus aperiam soluta commodi id! Illum, libero hic tempora consequatur, reiciendis quae itaque ducimus soluta tenetur animi, iure quam maxime quod."
+let architecturePara5a = "Image 5 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ex possimus ipsam impedit perspiciatis magni repudiandae sed, cumque recusandae iure inventore, quaerat tempore explicabo architecto eos unde quo ipsa ullam. Incidunt sint, officiis accusamus aperiam soluta commodi id! Illum, libero hic tempora consequatur, reiciendis quae itaque ducimus soluta tenetur animi, iure quam maxime quod."
+
+let architecturePara1b = "Image 1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea odit, quos beatae fuga libero, provident quam quisquam, error eos dolorem nihil! Optio tenetur porro pariatur, dolore non sapiente aliquid voluptates dolores quisquam voluptatum eos nobis ducimus! Architecto, aperiam nesciunt nobis modi mollitia error? Laboriosam quisquam sint eos illum! Aliquam, iure."
+let architecturePara2b = "Image 2 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea odit, quos beatae fuga libero, provident quam quisquam, error eos dolorem nihil! Optio tenetur porro pariatur, dolore non sapiente aliquid voluptates dolores quisquam voluptatum eos nobis ducimus! Architecto, aperiam nesciunt nobis modi mollitia error? Laboriosam quisquam sint eos illum! Aliquam, iure."
+let architecturePara3b = "Image 3 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea odit, quos beatae fuga libero, provident quam quisquam, error eos dolorem nihil! Optio tenetur porro pariatur, dolore non sapiente aliquid voluptates dolores quisquam voluptatum eos nobis ducimus! Architecto, aperiam nesciunt nobis modi mollitia error? Laboriosam quisquam sint eos illum! Aliquam, iure."
+let architecturePara4b = "Image 4 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea odit, quos beatae fuga libero, provident quam quisquam, error eos dolorem nihil! Optio tenetur porro pariatur, dolore non sapiente aliquid voluptates dolores quisquam voluptatum eos nobis ducimus! Architecto, aperiam nesciunt nobis modi mollitia error? Laboriosam quisquam sint eos illum! Aliquam, iure."
+let architecturePara5b = "Image 5 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea odit, quos beatae fuga libero, provident quam quisquam, error eos dolorem nihil! Optio tenetur porro pariatur, dolore non sapiente aliquid voluptates dolores quisquam voluptatum eos nobis ducimus! Architecto, aperiam nesciunt nobis modi mollitia error? Laboriosam quisquam sint eos illum! Aliquam, iure."
+
+clickChange(architectureTitle1, architecturePara1a, architecturePara1b, "architecture-img-1");
+clickChange(architectureTitle2, architecturePara2a, architecturePara2b, "architecture-img-2");
+clickChange(architectureTitle3, architecturePara3a, architecturePara3b, "architecture-img-3");
+clickChange(architectureTitle4, architecturePara4a, architecturePara4b, "architecture-img-4");
+clickChange(architectureTitle5, architecturePara5a, architecturePara5b, "architecture-img-5");
