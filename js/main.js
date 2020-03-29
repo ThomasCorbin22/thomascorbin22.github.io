@@ -67,7 +67,12 @@ function scrollAppearWelcome(){
     scrollAppear("text-hidden", "text-active")
 }
 
+function scrollAppearCoding(){
+    scrollAppear("text-hidden-from-below", "text-active")
+}
+
 window.addEventListener('scroll', scrollAppearWelcome);
+window.addEventListener('scroll', scrollAppearCoding);
 
 function scrollSlide(start, inter, end){
     const scrollImg = document.getElementsByClassName(start);
@@ -121,10 +126,15 @@ function scrollSlideArchitectureSmall() {
     scrollSlideReverse("architecture-img-small-hidden", "architecture-img-small-inter", "architecture-img-small-active")
 }
 
+function scrollSlideHoriontalLine() {
+    scrollSlideReverse("hl", "hr-inter", "hr-active")
+}
+
 window.addEventListener('scroll', scrollSlideWelcome);
 window.addEventListener('scroll', scrollSlideHobbies);
 window.addEventListener('scroll', scrollSlideArchitectureLarge);
 window.addEventListener('scroll', scrollSlideArchitectureSmall);
+// window.addEventListener('scroll', scrollSlideHoriontalLine);
 
 
 function scrollGrow(start, end){
@@ -272,3 +282,28 @@ clickChange(architectureTitle2, architecturePara2a, architecturePara2b, "archite
 clickChange(architectureTitle3, architecturePara3a, architecturePara3b, "architecture-img-3");
 clickChange(architectureTitle4, architecturePara4a, architecturePara4b, "architecture-img-4");
 clickChange(architectureTitle5, architecturePara5a, architecturePara5b, "architecture-img-5");
+
+function setLineDimensions(){
+    let div = document.getElementById("column-line-resize");
+    let divWidth = div.offsetWidth;
+    let divHeight = div.offsetHeight;
+
+    let verticalLine = document.getElementsByClassName("vl");
+    let horizontalLine = document.getElementsByClassName("hl");
+
+    let introPosition = horizontalLine[0].getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
+
+    if (introPosition < screenPosition / 1.5){
+        for (let element of verticalLine){
+            element.style.height = `${divHeight}px`;
+        }
+        
+        for (let element of horizontalLine){
+            element.style.width = `${divWidth}px`;
+        }
+    }
+}
+
+window.addEventListener('scroll', setLineDimensions);
+window.addEventListener('resize', setLineDimensions);

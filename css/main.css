@@ -288,6 +288,11 @@ body, html{
   color: #666
 }
 
+h4, h5{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
 .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
   position: relative;
   opacity: 0.70;
@@ -319,7 +324,7 @@ body, html{
 }
 
 .pimg5{
-  background-image: url('../img/old/hubble-03.jpg');
+  background-image: url('../img/coding/pexels-photo-169573.jpeg');
   min-height: 100%;
 }
 
@@ -561,6 +566,14 @@ header p{
   margin-right: auto;
   opacity: 0;
   transform: translateY(15px);
+  transition: 1s all ease-in;
+}
+
+.text-hidden-from-below{
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(-15px);
   transition: 1s all ease-in;
 }
 
@@ -889,6 +902,107 @@ li p {
   padding-right: 30px
 }
 
+/* Programming */
+
+.padding-bottom-10{
+  padding-bottom: 10px !important;
+}
+
+.padding-top-20{
+  padding-top: 20px !important;
+}
+
+.coding-list{
+  list-style-type: none;
+}
+
+.coding-list li a{
+  color: #282e34;
+}
+
+.coding-list li a:hover{
+  text-decoration: none;
+  color: red;
+}
+
+.vl {
+  border-left: 3px solid #282e34;
+  height: 0px;
+  position: absolute;
+  top: 0%;
+  transition: all ease-out;
+  transition-duration: 1.5s;
+}
+
+.vl-left{
+  left: 0%
+}
+
+.vl-right{
+  right: 0%;
+}
+
+.hl{
+  border-bottom: 3px solid #282e34;
+  width: 0px;
+  position: relative;
+  transition: all ease-out;
+  transition-duration: 1.5s;
+}
+
+.hl-display-none{
+  display: none;
+}
+
+/* Contact Me */
+
+.width-100{
+  width:100%
+}
+
+.padding-left-15{
+  padding-left:15px;
+}
+
+.icon-map{
+  width: 3vw;
+  height: 3vw;
+}
+
+.icon-phone{
+  width: 3vw;
+  height: 3vw;
+}
+
+.icon-envelope{
+  width: 3vw;
+  height: 3vw;
+}
+
+.md-form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  font-size: 14px;
+  width: 100%
+}
+
+.height-36{
+  height: 36px;
+}
+
+.height-72{
+  height: 72px;
+}
+
+.height-144{
+  height: 102px;
+}
+
+label, textarea{
+  vertical-align: middle;
+}
+
 
 /* Media Queries */
 
@@ -925,28 +1039,42 @@ li p {
 
 @media(max-width: 991px){
   .hobbies-list-item-hidden{
-    padding: 1vw 0vw 1vw 16vw;
+    padding: 3vw 0vw 1vw 12vw;
     background-position: 0 0;
-    background-size: 10vw;
-    background-position-y: 4vw;
+    background-size: 8vw;
+    background-position-y: 3vw;
   }
-  h4{
-    font-size: 4vw !important;
+  .hobbies-h4-reduce{
+    font-size: 3vw !important;
   }
-  
-  li > p {
-    font-size: 2vw !important;
+  .hobbies-p-reduce {
+    font-size: 1.5vw !important;
+  }
+  .h4-reduce{
+    font-size: 3vw !important;
   }
 }
 
 
-@media(max-width: 568px){
+@media(max-width: 575px){
   .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
       background-attachment: scroll
   }
   .welcome-img-hidden{
     width: 250px;
     height: 250px;
+  }
+  .h4-reduce{
+    font-size: 4vw !important;
+  }
+  .h5-reduce{
+    font-size: 3vw !important;
+  }
+  .vl {
+    display: none;
+  }
+  .hl-display-none{
+    display: block;
   }
 }
 
