@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta name="theme-color" content="#f6e8ea">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/main.css">
+    
     <!-- ****** faviconit.com favicons ****** -->
     <link rel="shortcut icon" href="img/icon-favicon/favicon.ico">
     <link rel="icon" sizes="16x16 32x32 64x64" href="img/icon-favicon/favicon.ico">
@@ -200,20 +200,20 @@
             <div class="hobbies-popup-img-line">
                 <img src="img/hobbies-splatter/20191110105158_983_000052.jpg" alt="">
                 <img src="img/hobbies-splatter/51548050_2104889702923032_1445081509546426368_n.jpg" alt="">
-                <img src="img/hobbies-splatter/65667741_10156387467091705_4771881615599075328_o.jpg" alt="">
+                <img src="img/hobbies-splatter/Photo from Tom Corbin.jpg" alt="">
                 <img src="img/hobbies-splatter/IMG_20190209_084225.jpg" alt="">
             </div>
             <div class="hobbies-popup-img-line">
                 <img src="img/hobbies-splatter/IMG_20190224_123404_1.jpg" alt="">
-                <img src="img/hobbies-splatter/IMG_20190413_162300.jpg" alt="">
-                <img src="img/hobbies-splatter/Photo from Tom Corbin(1).jpg" alt="">
+                <img src="img/hobbies-splatter/29186457_10155373035366705_7939498229228371968_o.jpg" alt="">
+                <img src="img/hobbies-splatter/IMG-20200222-WA0010.jpg" alt="">
                 <img src="img/hobbies-splatter/Photo from Tom Corbin(3).jpg" alt="">
             </div>
             <div class="hobbies-popup-img-line">
-                <img src="img/hobbies-splatter/received_884961151840189.jpeg" alt="">
-                <img src="img/hobbies-splatter/received_10156497043958158.jpeg" alt="">
+                <img src="img/hobbies-splatter/received_10155492684661705.jpeg" alt="">
+                <img src="img/hobbies-splatter/37604592_10211230472854070_4967545031226294272_n.jpg" alt="">
                 <img src="img/hobbies-splatter/received_481320472426383.jpeg" alt="">
-                <img src="img/hobbies-splatter/received_530355447731640.jpeg" alt="">
+                <img src="img/hobbies-splatter/IMG-20190430-WA0010.jpg" alt="">
             </div>
         </div>
     </section>
@@ -312,7 +312,7 @@
             </div>
             <div class="row" id="column-line-resize">
                 <div class="col-sm-4">
-                    <h5 class="text-hidden-from-below padding-bottom-10 h5-reduce">C</h5>
+                    <h4 class="text-hidden-from-below padding-bottom-10 h5-reduce">C</h4>
 
                     <div class="hl"></div>
 
@@ -341,7 +341,7 @@
                     <div class="vl vl-left"></div>
                     <div class="vl vl-right"></div>
 
-                    <h5 class="text-hidden-from-below padding-bottom-10 h5-reduce">Python</h5>
+                    <h4 class="text-hidden-from-below padding-bottom-10 h5-reduce">Python</h4>
 
                     <div class="hl  hl-display-none"></div>
 
@@ -364,7 +364,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-4">
-                    <h5 class="text-hidden-from-below padding-bottom-10 h5-reduce">HTML/CSS/JavaScript</h5>
+                    <h4 class="text-hidden-from-below padding-bottom-10 h5-reduce">HTML/CSS/JavaScript</h4>
 
                     <div class="hl hl-display-none"></div>
 
@@ -395,7 +395,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div>
-                            <p class="padding-left-15 left-justified">Swing by for a cup of coffee, or leave us a message:</p>
+                            <p class="padding-left-15 left-justified">Swing by for a drink, or leave me a message:</p>
                         </div>
                     </div>
                     
@@ -435,19 +435,24 @@
         
                             <!--Grid column-->
                             <div class="col-md-12">
-                                <div class="md-form vertical-align">
+                                <div class="md-form vertical-align padding-top-20">
                                     <textarea type="text" id="message" name="message" class="md-form-control height-144" placeholder="Your Message"></textarea>
                                 </div>
                             </div>
                         </div>
                         <!--Grid row-->
-        
                     </form>
         
-                    <div class="text-center text-md-left">
-                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="text-center text-md-left padding-top-20">
+                                <a class="btn btn-primary" onclick="validateForm();">Send</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="status text-center text-md-left padding-top-20"></div>
+                        </div>
                     </div>
-                    <div class="status"></div>
                 </div>
                 <row class="col-md-6">
                     <div class="row padding-bottom-30">
@@ -457,23 +462,23 @@
                             aria-hidden="false" tabindex="0"></iframe>
                     </div>
                     <class class="row text-center">
-                        <div class="col-md-4">
+                        <div class="col-sm-4">
                             <a class="icon">
                                 <img src="img/contact-me/location-01.png" class="icon-map">
                             </a>
-                            <p>6/F, The Harbourfront Landmark</p>
+                            <p class="paragraph-50">6/F, The Harbourfront Landmark</p>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-4">
                             <a>
                                 <img src="img/contact-me/phone-01.png" class="icon-phone">
                             </a>
-                            <p>(+852) 9467 5874</p>
+                            <p class="paragraph-50">(+852) 9467 5874</p>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-4">
                             <a>
                                 <img src="img/contact-me/email-01.png" class="icon-envelope">
                             </a>
-                            <p>thomas.corbin22 @gmail.com</p>
+                            <p class="paragraph-50">thomas.corbin22 @gmail.com</p>
                         </div>
                     </class>
                 </row>

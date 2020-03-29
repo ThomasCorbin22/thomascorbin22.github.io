@@ -289,8 +289,8 @@ body, html{
 }
 
 h4, h5{
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
@@ -329,12 +329,12 @@ h4, h5{
 }
 
 .pimg6{
-  background-image: url('../img/old/hubble-03.jpg');
+  background-image: url('../img/contact-me/IMG_20190413_162300.jpg');
   min-height: 100%;
 }
 
 .pimg7{
-  background-image: url('../img/old/hubble-01.jpg');
+  background-image: url('../img/IMG-20190506-WA0006.jpg');
   min-height: 100%;
 }
 
@@ -374,14 +374,13 @@ h4, h5{
   background-color: transparent;
 }
 
-
  /*
      Nav-bar
      */
 
 
 nav{
-    display: flex;
+    display: block;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
@@ -398,9 +397,13 @@ h2 {
 }
 
 h5 {
-  margin-bottom: 0rem !important;
+  margin-bottom: 0rem;
   padding: 0px 50px;
   font-size: medium;
+}
+
+.logo{
+  display: inline-block
 }
 
 .logo a{
@@ -466,8 +469,8 @@ h5 {
     transition: all 0.3s ease;
 }
 
-.nav-active{
-  transform: translateX(0%);    
+nav .nav-active{
+  transform: none;    
 }
 
 .toggle .line1{
@@ -647,11 +650,11 @@ header p{
 }
 
 .padding-left-right-30{
-  padding: 0px 30px !important;
+  padding: 0px 30px;
 }
 
 .padding-bottom-30{
-  padding-bottom: 30px !important;
+  padding-bottom: 30px;
 }
 
 #hobbies-unordered-list{
@@ -683,11 +686,11 @@ header p{
 }
 
 h4{
-  font-size: 2vw !important;
+  font-size: 2vw;
 }
 
 li p {
-  font-size: 1vw !important;
+  font-size: 1vw;
 }
 
 #hobbies-frisbee{
@@ -812,7 +815,7 @@ li p {
 }
 
 .hobbies-popup-img-line{
-  margin: auto !important;
+  margin: auto;
 }
 
 .hobbies-popup-img-line img{
@@ -854,6 +857,11 @@ li p {
   transition-duration: 1.5s;
 }
 
+.architecture-img-large-active:hover{
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in;
+}
+
 .architecture-img-large-inter{
   transform: translateX(-.5vw)
 }
@@ -891,10 +899,11 @@ li p {
 .architecture-img-small-active:hover{
   opacity: 0.5;
   transition: opacity 0.2s ease-in;
+  cursor: pointer;
 }
 
 .architecture-title{
-  margin-left: 0 !important;
+  margin-left: 0;
   height: 3em;
 }
 
@@ -905,11 +914,11 @@ li p {
 /* Programming */
 
 .padding-bottom-10{
-  padding-bottom: 10px !important;
+  padding-bottom: 10px;
 }
 
 .padding-top-20{
-  padding-top: 20px !important;
+  padding-top: 20px;
 }
 
 .coding-list{
@@ -964,6 +973,10 @@ li p {
   padding-left:15px;
 }
 
+.padding-left-50{
+  padding-left:50px;
+}
+
 .icon-map{
   width: 3vw;
   height: 3vw;
@@ -987,6 +1000,14 @@ li p {
   width: 100%
 }
 
+input[type=text]:focus{
+  outline: 1px solid white;     /* oranges! yey */
+}
+
+textarea[type=text]:focus{
+  outline: 1px solid white;     /* oranges! yey */
+}
+
 .height-36{
   height: 36px;
 }
@@ -996,13 +1017,34 @@ li p {
 }
 
 .height-144{
-  height: 102px;
+  height: 80px;
 }
 
 label, textarea{
   vertical-align: middle;
 }
 
+.btn-primary{
+  background-color: transparent;
+  border: 1px solid #9e9e9e;
+}
+
+.btn-primary:hover{
+  background-color: #9e9e9e;
+  border: 1px solid #9e9e9e;
+}
+
+input {
+  color: #fff;
+}
+
+textarea {
+  color: #fff;
+  }
+
+.paragraph-50{
+  font-size: 80%;
+}
 
 /* Media Queries */
 
@@ -1028,6 +1070,10 @@ label, textarea{
       transition-duration: 0s;
   }
 
+  .section{
+    padding: 30px 48px;
+  }
+
   .nav-links li{
       opacity: 0;
   }
@@ -1045,13 +1091,13 @@ label, textarea{
     background-position-y: 3vw;
   }
   .hobbies-h4-reduce{
-    font-size: 3vw !important;
+    font-size: 3vw;
   }
   .hobbies-p-reduce {
-    font-size: 1.5vw !important;
+    font-size: 1.5vw;
   }
   .h4-reduce{
-    font-size: 3vw !important;
+    font-size: 3vw;
   }
 }
 
@@ -1060,15 +1106,21 @@ label, textarea{
   .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
       background-attachment: scroll
   }
+  .section{
+    padding: 20px 32px;
+  }
+  header p{
+    font-size: 70%;
+  }
   .welcome-img-hidden{
     width: 250px;
     height: 250px;
   }
   .h4-reduce{
-    font-size: 4vw !important;
+    font-size: 4vw;
   }
   .h5-reduce{
-    font-size: 3vw !important;
+    font-size: 3vw;
   }
   .vl {
     display: none;
