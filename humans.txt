@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    <Thomas Corbin> -- <Engineer> -- <thoamscorbin22>
 
 # TECHNOLOGY COLOPHON
 

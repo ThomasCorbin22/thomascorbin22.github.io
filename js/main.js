@@ -343,3 +343,27 @@ function validateForm() {
     }
     document.querySelector('.status').innerHTML = "Sending...";
   }
+
+function changeHover(img, path) {
+    if(img) {
+        img.src = `${path}`;
+    }
+}
+
+$(document).ready(function() {
+    $(".icon-map").mouseover(function() {
+        changeHover(this, "images/contact-me/location-hover-01.png")
+    }).mouseout(function() {
+        changeHover(this, "images/contact-me/location-01.png")
+    });
+    $(".icon-phone").mouseover(function() {
+        changeHover(this, "images/contact-me/phone-hover-01.png")
+    }).mouseout(function() {
+        changeHover(this, "images/contact-me/phone-01.png")
+    });
+    $(".icon-envelope").mouseover(function() {
+        changeHover(this, "images/contact-me/email-hover-01.png")
+    }).mouseout(function() {
+        changeHover(this, "images/contact-me/email-01.png")
+    });
+})

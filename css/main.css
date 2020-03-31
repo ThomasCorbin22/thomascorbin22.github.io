@@ -303,38 +303,38 @@ h4, h5{
 }
 
 .pimg1{
-  background-image: url('../img/old/hubble-01.jpg');
+  background-image: url('../images/old/hubble-01.jpg');
   min-height: 100%;
 }
 
 .pimg2{
-  background-image: url('../img/hobbies-front/AJH-NB-20180122-008-001-0002-JCAM02.jpg');
+  background-image: url('../images/hobbies-front/AJH-NB-20180122-008-001-0002-JCAM02.jpg');
   min-height: 100%;
   background-position: top;
 }
 
 .pimg3{
-  background-image: url('../img/architecture/Section\ -\ Perspective.jpg');
+  background-image: url('../images/architecture/Section\ -\ Perspective.jpg');
   min-height: 100%;
 }
 
 .pimg4{
-  background-image: url('../img/old/hubble-03.jpg');
+  background-image: url('../images/old/hubble-03.jpg');
   min-height: 100%;
 }
 
 .pimg5{
-  background-image: url('../img/coding/pexels-photo-169573.jpeg');
+  background-image: url('../images/coding/pexels-photo-169573.jpeg');
   min-height: 100%;
 }
 
 .pimg6{
-  background-image: url('../img/contact-me/IMG_20190413_162300.jpg');
+  background-image: url('../images/contact-me/IMG_20190413_162300.jpg');
   min-height: 100%;
 }
 
 .pimg7{
-  background-image: url('../img/IMG-20190506-WA0006.jpg');
+  background-image: url('../images/IMG-20190506-WA0006.jpg');
   min-height: 100%;
 }
 
@@ -496,15 +496,15 @@ nav .nav-active{
 }
 
 #carousel-img1{
-  background-image: url(../img/welcome-carousel/DSC_0261.JPG);
+  background-image: url(../images/welcome-carousel/DSC_0261.JPG);
 }
 
 #carousel-img2{
-  background-image: url(../img/welcome-carousel/us.jpg);
+  background-image: url(../images/welcome-carousel/us.jpg);
 }
 
 #carousel-img3{
-  background-image: url(../img/welcome-carousel/81606594_10156523291225064_6816703669640101888_o.jpg);
+  background-image: url(../images/welcome-carousel/81606594_10156523291225064_6816703669640101888_o.jpg);
 }
 
 .carousel-background-color{
@@ -615,7 +615,9 @@ header p{
 
 .welcome-img-active:hover{
   opacity: 0.5;
-  transition: opacity 0.2s ease-in;
+  transition: all .5s ease-in-out;
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 /* Hobbies Section */
@@ -633,15 +635,17 @@ header p{
 }
 
 .hobbies-img-active{
-  height: 100%;
-  width: 100%;
+  height: 99%;
+  width: 99%;
   max-height: 50vw;
   opacity: 1;
 }
 
 .hobbies-img-active:hover{
   opacity: 0.5;
-  transition: opacity 0.2s ease-in;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -694,19 +698,35 @@ li p {
 }
 
 #hobbies-frisbee{
-  background-image: url(../img/hobbies-section/icon1-01.png);
+  background-image: url(../images/hobbies-section/icon1-01.png);
+}
+
+#hobbies-frisbee:hover{
+  background-image: url(../images/hobbies-section/icon1-hover-01.png);
 }
 
 #hobbies-photography{
-  background-image: url(../img/hobbies-section/icon2-01.png);
+  background-image: url(../images/hobbies-section/icon2-01.png);
+}
+
+#hobbies-photography:hover{
+  background-image: url(../images/hobbies-section/icon2-hover-01.png);
 }
 
 #hobbies-running{
-  background-image: url(../img/hobbies-section/icon3-01.png);
+  background-image: url(../images/hobbies-section/icon3-01.png);
+}
+
+#hobbies-running:hover{
+  background-image: url(../images/hobbies-section/icon3-hover-01.png);
 }
 
 #hobbies-adventure-sports{
-  background-image: url(../img/hobbies-section/icon4-01.png);
+  background-image: url(../images/hobbies-section/icon4-01.png);
+}
+
+#hobbies-adventure-sports:hover{
+  background-image: url(../images/hobbies-section/icon4-hover-01.png);
 }
 
 .hobbies-popup-splatter{
@@ -829,8 +849,8 @@ li p {
 
 .hobbies-popup-img-line img:hover{
   opacity: 0.5;
-  transition: opacity 0.2s ease-in;
-  cursor: pointer;
+  transition: all 0.5s ease-in;
+  transform: scale(1.02);
 }
 
 .toggleClipPath {
@@ -857,11 +877,6 @@ li p {
   transition-duration: 1.5s;
 }
 
-.architecture-img-large-active:hover{
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in;
-}
-
 .architecture-img-large-inter{
   transform: translateX(-.5vw)
 }
@@ -869,6 +884,12 @@ li p {
 .architecture-img-large-active{
   transition-duration: .5s;
   transform: none;
+}
+
+.architecture-img-large-active:hover{
+  opacity: 0.5;
+  transition: all 0.5s ease-in;
+  transform: scale(1.01);
 }
 
 .architecture-row-small{
@@ -898,7 +919,8 @@ li p {
 
 .architecture-img-small-active:hover{
   opacity: 0.5;
-  transition: opacity 0.2s ease-in;
+  transition: all 0.5s ease-in;
+  transform: scale(1.02);
   cursor: pointer;
 }
 
@@ -1001,11 +1023,11 @@ li p {
 }
 
 input[type=text]:focus{
-  outline: 1px solid white;     /* oranges! yey */
+  outline: 1px solid white;
 }
 
 textarea[type=text]:focus{
-  outline: 1px solid white;     /* oranges! yey */
+  outline: 1px solid white;
 }
 
 .height-36{
@@ -1048,7 +1070,7 @@ textarea {
 
 /* Media Queries */
 
-@media screen and (max-width: 1336px){
+@media screen and (max-width: 1440px){
   .nav-links a{
       letter-spacing: 2px;
   }
@@ -1083,7 +1105,7 @@ textarea {
   }
 }
 
-@media(max-width: 991px){
+@media screen and (max-width: 991px){
   .hobbies-list-item-hidden{
     padding: 3vw 0vw 1vw 12vw;
     background-position: 0 0;
@@ -1102,7 +1124,7 @@ textarea {
 }
 
 
-@media(max-width: 575px){
+@media screen and (max-width: 575px){
   .pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
       background-attachment: scroll
   }
