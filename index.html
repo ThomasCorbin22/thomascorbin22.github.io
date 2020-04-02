@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css/main.css">
-    
+
     <!-- ****** faviconit.com favicons ****** -->
     <link rel="shortcut icon" href="img/icon-favicon/favicon.ico">
     <link rel="icon" sizes="16x16 32x32 64x64" href="img/icon-favicon/favicon.ico">
@@ -38,6 +39,8 @@
     <meta name="msapplication-config" content="img/icon-favicon/browserconfig.xml">
     <!-- ****** faviconit.com favicons ****** -->
 
+    <script src="https://kit.fontawesome.com/e6b2429683.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -49,29 +52,26 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#Welcome">Welcome</a>
+                <a class="header-text" data-scroll href="#Welcome">Welcome</a>
             </li>
             <li>
-                <a href="#Hobbies">Hobbies</a>
+                <a class="header-text" data-scroll href="#Hobbies">Hobbies</a>
             </li>
             <li>
-                <a href="#Architecture">Architecture</a>
-            </li>
-            <!-- <li>
-                <a href="#YearAbroad">Year Abroad</a>
-            </li> -->
-            <li>
-                <a href="#Coding">Programming</a>
+                <a class="header-text" data-scroll href="#Architecture">Architecture</a>
             </li>
             <li>
-                <a href="#ContactMe">Contact</a>
+                <a class="header-text" data-scroll href="#Coding">Programming</a>
+            </li>
+            <li>
+                <a class="header-text" data-scroll href="#ContactMe">Contact</a>
             </li>
             <li id="socialMedia">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-github"></a>
-                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-facebook header-text"></a>
+                <a href="#" class="fa fa-twitter header-text"></a>
+                <a href="#" class="fa fa-instagram header-text"></a>
+                <a href="#" class="fa fa-github header-text"></a>
+                <a href="#" class="fa fa-linkedin header-text"></a>
             </li>
         </ul>
         <div class="burger">
@@ -109,27 +109,43 @@
     <section class="section section-full section-light">
         <div class="container-fluid">
             <div class="row">
-                <h2 class="text-hidden">About Me</h2>
+                <h2 class="text-hidden padding-bottom-20">About Me</h2>
                 <p class="text-hidden">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit animi eveniet sapiente doloribus nisi iste consectetur assumenda. Eaque excepturi itaque velit vero minima fuga cupiditate. Repellat perferendis perspiciatis cum ipsa laborum aliquid quam atque, id vero in velit possimus aperiam reiciendis at magni quos enim natus nam. Quis libero ex sunt possimus incidunt, velit enim quidem accusantium ratione placeat odit corporis deleniti consequuntur quaerat excepturi nobis reiciendis ducimus, quas repellendus quam corrupti, sapiente maiores at. Eaque mollitia nihil ut accusantium eveniet eius voluptatibus quidem veritatis deserunt expedita a voluptates beatae, saepe nesciunt fugiat adipisci eligendi placeat delectus labore debitis voluptas?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit animi eveniet sapiente
+                    doloribus nisi iste consectetur assumenda. Eaque excepturi itaque velit vero minima fuga cupiditate.
+                    Repellat perferendis perspiciatis cum ipsa laborum aliquid quam atque, id vero in velit possimus
+                    aperiam reiciendis at magni quos enim natus nam. Quis libero ex sunt possimus incidunt, velit enim
+                    quidem accusantium ratione placeat odit corporis deleniti consequuntur quaerat excepturi nobis
+                    reiciendis ducimus, quas repellendus quam corrupti, sapiente maiores at. Eaque mollitia nihil ut
+                    accusantium eveniet eius voluptatibus quidem veritatis deserunt expedita a voluptates beatae, saepe
+                    nesciunt fugiat adipisci eligendi placeat delectus labore debitis voluptas?
                 </p>
             </div>
             <div class="row">
                 <div class="welcome-inline">
-                    <a data-lightbox="welcome" href="images/welcome-images/72104518_10156320594165064_3831027737594691584_o-large.jpg"><img class="welcome-img-hidden welcome-img-top" src="images/welcome-images/72104518_10156320594165064_3831027737594691584_o.jpg" alt=""></a>
-                    <a data-lightbox="welcome" href="images/welcome-images/75407753_10156667351156705_571468028915482624_o-large.jpg"><img class="welcome-img-hidden" src="images/welcome-images/75407753_10156667351156705_571468028915482624_o.jpg" alt=""></a>
-                    <a data-lightbox="welcome" href="images/welcome-images/Athens_2014-01-29_10-13-16-large.JPG"><img class="welcome-img-hidden" src="images/welcome-images/Athens_2014-01-29_10-13-16.JPG" alt=""></a>
+                    <a data-lightbox="welcome"
+                        href="images/welcome-images/72104518_10156320594165064_3831027737594691584_o-large.jpg"><img
+                            class="welcome-img-hidden welcome-img-top"
+                            src="images/welcome-images/72104518_10156320594165064_3831027737594691584_o.jpg" alt=""></a>
+                    <a data-lightbox="welcome"
+                        href="images/welcome-images/75407753_10156667351156705_571468028915482624_o-large.jpg"><img
+                            class="welcome-img-hidden"
+                            src="images/welcome-images/75407753_10156667351156705_571468028915482624_o.jpg" alt=""></a>
+                    <a data-lightbox="welcome" href="images/welcome-images/Athens_2014-01-29_10-13-16-large.JPG"><img
+                            class="welcome-img-hidden" src="images/welcome-images/Athens_2014-01-29_10-13-16.JPG"
+                            alt=""></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="pimg2" id="Hobbies">
+    <div class="section-img" id="Hobbies">
         <div class="ptext">
-            <span class="border trans">
+            <span class="border">
                 Hobbies
             </span>
         </div>
+        <div class="pimg2"></div>
     </div>
 
     <section class="section section-full section-dark">
@@ -141,22 +157,22 @@
                 <div class="col-lg-4 left-justified padding-left-right-30">
                     <ul id="hobbies-unordered-list">
                         <li class="hobbies-list-item-hidden" id="hobbies-frisbee">
-                            <h4 class="hobbies-h4-reduce">Frisbee</h4>
+                            <h4 class="h4-responsive hobbies-h4-reduce">Frisbee</h4>
                             <p class="hobbies-p-reduce">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                                 Incidunt, aperiam?</p>
                         </li>
                         <li class="hobbies-list-item-hidden" id="hobbies-photography">
-                            <h4 class="hobbies-h4-reduce">Photography</h4>
+                            <h4 class="h4-responsive hobbies-h4-reduce">Photography</h4>
                             <p class="hobbies-p-reduce">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Debitis, excepturi!</p>
                         </li>
                         <li class="hobbies-list-item-hidden" id="hobbies-running">
-                            <h4 class="hobbies-h4-reduce">Running</h4>
+                            <h4 class="h4-responsive hobbies-h4-reduce">Running</h4>
                             <p class="hobbies-p-reduce">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                 Adipisci, ratione.</p>
                         </li>
                         <li class="hobbies-list-item-hidden" id="hobbies-adventure-sports">
-                            <h4 class="hobbies-h4-reduce">Adventure Sports</h4>
+                            <h4 class="h4-responsive hobbies-h4-reduce">Adventure Sports</h4>
                             <p class="hobbies-p-reduce">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                 Adipisci, ratione.</p>
                         </li>
@@ -197,12 +213,13 @@
         </div>
     </section>
 
-    <div class="pimg3" id="Architecture">
+    <div class="section-img" id="Architecture">
         <div class="ptext">
-            <span class="border trans">
+            <span class="border">
                 Architecture
             </span>
         </div>
+        <div class="pimg3"></div>
     </div>
 
     <section class="section section-half section-light">
@@ -211,7 +228,7 @@
                 <div class="col-lg-4 left-justified">
                     <div class="row">
                         <h4
-                            class="text-hidden padding-right-30 architecture-text-change padding-bottom-30 architecture-title hobbies-h4-reduce">
+                            class="text-hidden padding-right-30 architecture-text-change padding-bottom-30 architecture-title h4-responsive hobbies-h4-reduce">
                             Sentosa-Brani Masterplan</h4>
                     </div>
                     <div class="row">
@@ -255,43 +272,24 @@
         </div>
     </section>
 
-    <!-- <div class="pimg4" id="YearAbroad">
+    <div class="section-img" id="Coding">
         <div class="ptext">
-            <span class="border trans">
-                Year Abroad
-            </span>
-        </div>
-    </div>
-
-    <section class="section section-half section-dark">
-        <h2>Year Abroad</h2>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus eos fugiat aliquam atque architecto! Aut
-            magni nulla quas impedit laborum cumque. Ad rem laborum expedita cum cupiditate ut magni alias sit! Repellat
-            suscipit ipsa eligendi asperiores sapiente voluptatibus dolore ad labore error eum iure nostrum repellendus
-            perferendis, impedit pariatur maxime, mollitia non. Vel, quis. Quos cum quasi facere itaque exercitationem
-            labore commodi nam, molestias sint adipisci reiciendis, expedita, porro numquam magnam odit ex corrupti
-            ipsam mollitia corporis hic eveniet. At cum maiores nihil facere accusantium sequi officiis ipsam error
-            mollitia assumenda ab quasi ipsa eligendi, libero minus amet possimus eveniet.
-        </p>
-    </section> -->
-
-    <div class="pimg5" id="Coding">
-        <div class="ptext">
-            <span class="border trans">
+            <span class="border">
                 Programming
             </span>
         </div>
+        <div class="pimg5"></div>
     </div>
 
     <section class="section section-half section-light">
         <div class="container-fluid">
             <div class="row">
-                <h4 class="text-hidden-from-below padding-bottom-30 h4-reduce">Try out some of my code!</h4>
+                <h4 class="text-hidden-from-below padding-bottom-30 h4-responsive h4-reduce">Try out some of my code!</h4>
             </div>
             <div class="row" id="column-line-resize">
                 <div class="col-sm-4">
-                    <h4 class="text-hidden-from-below padding-bottom-10 h5-reduce">C</h4>
+                    <h3 class="text-hidden-from-below padding-bottom-10 icons-coding"><i class="fab fa-cuttlefish"></i>
+                    </h3>
 
                     <div class="hl"></div>
 
@@ -317,7 +315,7 @@
                     <div class="vl vl-left"></div>
                     <div class="vl vl-right"></div>
 
-                    <h4 class="text-hidden-from-below padding-bottom-10 h5-reduce">Python</h4>
+                    <h3 class="text-hidden-from-below padding-bottom-10 icons-coding"><i class="fab fa-python"></i></h3>
 
                     <div class="hl  hl-display-none"></div>
 
@@ -343,102 +341,117 @@
                     </ul>
                 </div>
                 <div class="col-sm-4">
-                    <h4 class="text-hidden-from-below padding-bottom-10 h5-reduce">HTML/CSS/JavaScript</h4>
+                    <h3 class="text-hidden-from-below padding-bottom-10 icons-coding"><i class="fab fa-html5"></i> / <i
+                            class="fab fa-css3-alt"></i> / <i class="fab fa-js-square"></i></h3>
 
                     <div class="hl hl-display-none"></div>
 
                     <ul class="coding-list">
                         <li class="text-hidden-from-below padding-top-20">
-                            <a href="https://github.com/ThomasCorbin22/cs50-2019-week5-website">Beer Pong</a>
+                            <a id="this-website">This Website! Obviously.</a>
                         </li>
                         <li class="text-hidden-from-below">
                             <a href="https://github.com/ThomasCorbin22/my-dog-website">My Dog</a>
+                        </li>
+                        <li class="text-hidden-from-below">
+                            <a href="https://github.com/ThomasCorbin22/cs50-2019-week5-website">Beer Pong</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <div class="jumbotron mt-5 daily-blog">
+            <h5>20/04/02</h5>
+            <h2>Tip for the Day</h3>
+            <h5>HTML & CSS Tips</h5>
+            <hr class="my-4">
+            <p class="link-red">Get a smooth scroll on your page at the following link: <br> <a href="https://github.com/cferdinandi/smooth-scroll">https://github.com/cferdinandi/smooth-scroll</a></p>
+            <p class="link-red">Free icons can be found here: <br> <a href="https://fontawesome.com/">https://fontawesome.com/</a></p>
+            <p class="link-red">A great website for adding animations to your website through CSS: <br> <a href="https://github.com/daneden/animate.css">https://github.com/daneden/animate.css</a></p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg tp-3 mt-3" href="#" role="button">See More Tips Here!</a>
+            </p>
+        </div>
+
     </section>
 
-    <div class="pimg6" id="ContactMe">
+    <div class="section-img" id="ContactMe">
         <div class="ptext">
-            <span class="border trans">
+            <span class="border">
                 Contact Me
             </span>
         </div>
+        <div class="pimg6"></div>
     </div>
 
     <section class="section section-full section-dark">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row contact-me">
                 <div class="col-md-6">
                     <div class="row">
                         <div>
                             <p class="padding-left-15 left-justified">Swing by for a drink, or leave me a message:</p>
                         </div>
                     </div>
-                    
-                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                    <form id="my-form" action="https://formspree.io/moqnqdjb" method="POST">
+
                         <div class="row">
-                            <!--Grid column-->
                             <div class="col-md-6">
                                 <div class="md-form">
-                                    <input type="text" id="name" name="name" class="md-form-control height-36" placeholder="Your Name">
+                                    <input type="text" name="name" class="md-form-control height-36"
+                                        placeholder="Your Name">
                                 </div>
                             </div>
-                            <!--Grid column-->
-        
-                            <!--Grid column-->
+
                             <div class="col-md-6">
                                 <div class="md-form">
-                                    <input type="text" id="email" name="email" class="md-form-control height-36" placeholder="Your Email">
+                                    <input type="email" name="email" class="md-form-control height-36"
+                                        placeholder="Your Email">
                                 </div>
                             </div>
-                            <!--Grid column-->
-        
                         </div>
-                        <!--Grid row-->
-        
-                        <!--Grid row-->
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="md-form">
-                                    <input type="text" id="subject" name="subject" class="md-form-control height-72" placeholder="Subject">
+                                    <input type="text" name="subject" class="md-form-control height-72"
+                                        placeholder="Subject">
                                 </div>
                             </div>
                         </div>
-                        <!--Grid row-->
-        
-                        <!--Grid row-->
+
                         <div class="row">
-        
-                            <!--Grid column-->
                             <div class="col-md-12">
                                 <div class="md-form vertical-align padding-top-20">
-                                    <textarea type="text" id="message" name="message" class="md-form-control height-144" placeholder="Your Message"></textarea>
+                                    <textarea type="text" name="message" class="md-form-control height-144"
+                                        placeholder="Your Message"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <!--Grid row-->
-                    </form>
-        
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="text-center text-md-left padding-top-20">
-                                <a class="btn btn-primary" onclick="validateForm();">Send</a>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="text-center text-md-left padding-top-20">
+                                    <button id="my-form-button" class="btn btn-primary">Send</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="status text-center text-md-left padding-top-20">
+                                    <p id="my-form-status"></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="status text-center text-md-left padding-top-20"></div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
+
                 <row class="col-md-6">
                     <div class="row padding-bottom-30">
                         <iframe class="width-100"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.320857066187!2d114.19035331478683!3d22.303701985321695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401c906c85397%3A0xedd2d296aa8a7803!2sXccelerate!5e0!3m2!1sen!2shk!4v1585450869852!5m2!1sen!2shk"
-                             height="250" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0"></iframe>
+                            height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
                     </div>
                     <class class="row text-center">
                         <div class="col-sm-4">
@@ -465,13 +478,28 @@
         </div>
     </section>
 
-    <div class="pimg7">
+    <div class="section-img">
         <div class="ptext">
             <span class="border">
-                Thanks for Visting
+                Thanks for Visiting
             </span>
         </div>
+        <div class="pimg7"></div>
     </div>
+
+    <footer id="footer" class="section section-full section-dark">
+        <div class="logo-footer">
+            <a href="index.html">
+                <h5>Thomas Corbin</h5>
+            </a>
+        </div>
+        <div>
+            <p class="header-text m-0 pr-5">
+                Copyright &copy; 2020. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
 
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
@@ -482,6 +510,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 </body>
