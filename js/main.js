@@ -426,6 +426,7 @@ function animationOnScroll(element, animationName1, animationName2) {
 
     if (introPosition < screenPosition / 2) {
         for (let item of node){
+            console.log(animationName1, animationName2)
             item.classList.add(animationName1, animationName2);
         }
     }
