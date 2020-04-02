@@ -432,7 +432,7 @@ function animationOnScroll(element, animationName1, animationName2, animationNam
 }
 
 function animationOnScrollBlog(){
-    animationOnScroll("daily-blog", "animated", "rotateInDownRight", '')
+    animationOnScroll("daily-blog", "animated", "rotateInDownRight")
 }
 
 function animationOnScrollContact(){

@@ -988,7 +988,7 @@ li p {
 }
 
 .icons-coding {
-  font-size: 350%;
+  font-size: 250%;
 }
 
 .daily-blog {
@@ -1015,6 +1015,10 @@ li p {
 }
 
 /* Contact Me */
+
+.contact-me{
+  opacity: 0;
+}
 
 .width-100{
   width:100%
