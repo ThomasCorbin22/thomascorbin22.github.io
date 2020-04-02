@@ -418,7 +418,7 @@ function ajax(method, url, data, success, error) {
     xhr.send(data);
 }
 
-function animationOnScroll(element, animationName1, animationName2, animationName3) {
+function animationOnScroll(element, animationName1, animationName2) {
     const node = document.getElementsByClassName(element);
 
     let introPosition = node[0].getBoundingClientRect().top;
@@ -426,7 +426,7 @@ function animationOnScroll(element, animationName1, animationName2, animationNam
 
     if (introPosition < screenPosition / 2) {
         for (let item of node){
-            item.classList.add(animationName1, animationName2, animationName3);
+            item.classList.add(animationName1, animationName2);
         }
     }
 }
