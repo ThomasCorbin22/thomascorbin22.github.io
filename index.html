@@ -43,7 +43,7 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar">
     <nav id='navbar'>
         <div class="logo">
             <a href="index.html">
@@ -369,11 +369,11 @@
             <p class="link-red">Create two classes, one hidden and one active. The hidden class should style the element to be hidden (such as opacity: 0)  and also style the location to where you want it to come from (such as transform: translateY(50px)). The active class should style the item in its final location with it unhidden.Then use javascript to change between the classes on scroll:</p>
             <hr class="my-4">
             <p class="link-red">function scrollEffect(){</p>
-            <p class="link-red">    const hiddenClass = document.getElementsByClassName("hidden-class");</p>
-            <p class="link-red">        let introPosition = hiddenClass[0].getBoundingClientRect().top;</p>
+            <p class="link-red">    const hiddenClass = document.getElementsByClassName("hidden-class")[0];</p>
+            <p class="link-red">        let introPosition = hiddenClass.getBoundingClientRect().top;</p>
             <p class="link-red">        let screenPosition = window.innerHeight;</p>
             <p class="link-red">        if (introPosition &#60 screenPosition / 2){ </p>
-            <p class="link-red">            hiddenClass[0].classList.add("active-class");</p>
+            <p class="link-red">            hiddenClass.classList.add("active-class");</p>
             <p class="link-red">        }</p>
             <p class="link-red">window.addEventListener('scroll', scrollEffect);</p>
             <hr class="my-4">
