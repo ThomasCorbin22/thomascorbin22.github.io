@@ -362,13 +362,22 @@
         </div>
 
         <div class="jumbotron mt-5 daily-blog">
-            <h5>20/04/02</h5>
+            <h5>21/04/02</h5>
             <h2>Tip for the Day</h3>
-            <h5>HTML & CSS Tips</h5>
+            <h5>Javascript: Make An Effect On Scroll</h5>
             <hr class="my-4">
-            <p class="link-red">Get a smooth scroll on your page at the following link: <br> <a href="https://github.com/cferdinandi/smooth-scroll">https://github.com/cferdinandi/smooth-scroll</a></p>
-            <p class="link-red">Free icons can be found here: <br> <a href="https://fontawesome.com/">https://fontawesome.com/</a></p>
-            <p class="link-red">A great website for adding animations to your website through CSS: <br> <a href="https://github.com/daneden/animate.css">https://github.com/daneden/animate.css</a></p>
+            <p class="link-red">Create two classes, one hidden and one active. The hidden class should style the element to be hidden (such as opacity: 0)  and also style the location to where you want it to come from (such as transform: translateY(50px)). The active class should style the item in its final location with it unhidden.Then use javascript to change between the classes on scroll:</p>
+            <hr class="my-4">
+            <p class="link-red">function scrollAppear("hidden-class", "active-class"{</p>
+            <p class="link-red">    const hiddenClass = document.getElementsByClassName("hidden-class");</p>
+            <p class="link-red">        let introPosition = hiddenClass[0].getBoundingClientRect().top;</p>
+            <p class="link-red">        let screenPosition = window.innerHeight;</p>
+            <p class="link-red">        if (introPosition < screenPosition){ </p>
+            <p class="link-red">            hiddenClass[0].classList.add("active-class");</p>
+            <p class="link-red">        }</p>
+            <hr class="my-4">
+            <p class="link-red">In fact the same technique can be applied across a variety of effects. Just set the classes that show the effect in the beginning and end state and use Javascript to change between them.
+            </p>
             <p class="lead">
                 <a class="btn btn-primary btn-lg tp-3 mt-3" href="#" role="button">See More Tips Here!</a>
             </p>
