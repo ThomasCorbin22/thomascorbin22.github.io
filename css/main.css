@@ -381,7 +381,7 @@ h4, h5{
      */
 
 
-nav{
+#navbar{
     display: block;
     justify-content: space-around;
     align-items: center;

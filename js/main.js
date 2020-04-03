@@ -442,3 +442,14 @@ function animationOnScrollContact(){
 
 window.addEventListener('scroll', animationOnScrollBlog);
 window.addEventListener('scroll', animationOnScrollContact);
+
+// // Change Navbar to be transparent
+// const navBar = document.querySelector('#navbar');
+// window.addEventListener('scroll', function() {
+//     if (window.scrollY > 100) {
+//         navBar.style.backgroundColor = "transparent";
+//     }
+//     if (window.scrollY <= 100) {
+//         navBar.style.backgroundColor = "#282e34";
+//     }
+// })

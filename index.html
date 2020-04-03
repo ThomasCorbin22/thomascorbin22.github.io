@@ -44,7 +44,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav id='navbar'>
         <div class="logo">
             <a href="index.html">
                 <h5>Thomas Corbin</h5>
@@ -372,7 +372,7 @@
             <p class="link-red">    const hiddenClass = document.getElementsByClassName("hidden-class");</p>
             <p class="link-red">        let introPosition = hiddenClass[0].getBoundingClientRect().top;</p>
             <p class="link-red">        let screenPosition = window.innerHeight;</p>
-            <p class="link-red">        if (introPosition &#60 screenPosition){ </p>
+            <p class="link-red">        if (introPosition &#60 screenPosition / 2){ </p>
             <p class="link-red">            hiddenClass[0].classList.add("active-class");</p>
             <p class="link-red">        }</p>
             <p class="link-red">window.addEventListener('scroll', scrollEffect);</p>
