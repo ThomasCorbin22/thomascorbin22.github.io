@@ -362,7 +362,7 @@
         </div>
 
         <div class="jumbotron mt-5 daily-blog">
-            <h5>21/04/02</h5>
+            <h5>21/03/20</h5>
             <h2>Tip for the Day</h3>
             <h5>Javascript: Make An Effect On Scroll</h5>
             <hr class="my-4">
@@ -370,11 +370,12 @@
             <hr class="my-4">
             <p class="link-red">function scrollAppear("hidden-class", "active-class"{</p>
             <p class="link-red">    const hiddenClass = document.getElementsByClassName("hidden-class");</p>
-            <p class="link-red">        let introPosition = hiddenClass[0].getBoundingClientRect().top;</p>
-            <p class="link-red">        let screenPosition = window.innerHeight;</p>
-            <p class="link-red">        if (introPosition &#60 screenPosition){ </p>
-            <p class="link-red">            hiddenClass[0].classList.add("active-class");</p>
-            <p class="link-red">        }</p>
+            <p class="link-red">    let introPosition = hiddenClass[0].getBoundingClientRect().top;</p>
+            <p class="link-red">    let screenPosition = window.innerHeight;</p>
+            <p class="link-red">    if (introPosition &#60 screenPosition){ </p>
+            <p class="link-red">        hiddenClass[0].classList.add("active-class");</p>
+            <p class="link-red">    }</p>
+            <p class="link-red">}</p>
             <hr class="my-4">
             <p class="link-red">In fact the same technique can be applied across a variety of effects. Just set the classes that show the effect in the beginning and end state and use Javascript to change between them.
             </p>
