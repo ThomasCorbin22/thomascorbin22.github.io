@@ -1,0 +1,23 @@
+
+/* Footer*/
+
+#footer {
+    height: 8vh;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-footer a{
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+  }
+  
+  .logo-footer a:hover{
+    text-decoration: none;
+    color: red;
+  }
+  
