@@ -49,12 +49,7 @@
   }
   
   h1{
-    position: absolute;
-    text-align: center;
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
     letter-spacing: 6px;
-    width: 100%;
     top: 40%;
     z-index: 3;
     opacity: 0;
@@ -63,12 +58,7 @@
   }
   
   header p{
-    position: absolute;
-    text-align: center;
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
     letter-spacing: 5px;
-    width: 100%;
     top: 55%;
     z-index: 3;
     opacity: 0;

@@ -70,23 +70,12 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-clickChange(architectureTitle1, architecturePara1a, architecturePara1b, "architecture-img-1");
-clickChange(architectureTitle2, architecturePara2a, architecturePara2b, "architecture-img-2");
-clickChange(architectureTitle3, architecturePara3a, architecturePara3b, "architecture-img-3");
-clickChange(architectureTitle4, architecturePara4a, architecturePara4b, "architecture-img-4");
-clickChange(architectureTitle5, architecturePara5a, architecturePara5b, "architecture-img-5");
+clickChange(architectureTitle1, architectureSubTitle1, architecturePara1a, architecturePara1b, "architecture-img-1");
+clickChange(architectureTitle2, architectureSubTitle2, architecturePara2a, architecturePara2b, "architecture-img-2");
+clickChange(architectureTitle3, architectureSubTitle3, architecturePara3a, architecturePara3b, "architecture-img-3");
+clickChange(architectureTitle4, architectureSubTitle4, architecturePara4a, architecturePara4b, "architecture-img-4");
+clickChange(architectureTitle5, architectureSubTitle5, architecturePara5a, architecturePara5b, "architecture-img-5");
 
 var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 300
 });
-
-// // Change Navbar to be transparent
-// const navBar = document.querySelector('#navbar');
-// window.addEventListener('scroll', function() {
-//     if (window.scrollY > 100) {
-//         navBar.style.backgroundColor = "transparent";
-//     }
-//     if (window.scrollY <= 100) {
-//         navBar.style.backgroundColor = "#282e34";
-//     }
-// })

@@ -1,49 +1,27 @@
- /*
-Nav-bar
-*/
-
+ 
+ /* Nav-bar */
 
 #navbar{
-display: block;
-justify-content: space-around;
-align-items: center;
-min-height: 8vh;
-background-color: #282e34;
-font-family: 'Poppins', sans-serif;
-position: fixed;
-top: 0;
-width: 100%;
-z-index: 99;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    top: 0;
+    width: 100%;
+    z-index: 99;
 }
 
-.padding-bottom-20 {
-    padding-bottom: 20px;
-}
-
-h5 {
-    margin-bottom: 0rem;
-    padding: 0px 50px;
+.nav-title {
     font-size: medium;
 }
 
 .logo{
-    display: inline-block
-}
-
-.logo a{
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
     letter-spacing: 5px;
-    display: inline-block;
-    margin: 0;
-    position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.logo a:hover{
+.logo:hover{
     text-decoration: none;
-    color: red;
+    color: rgba(255,0,0,1);
 }
 
 .nav-links{
@@ -53,7 +31,6 @@ h5 {
     justify-content: space-around;
     align-items: center;
     height: 8vh;
-    margin: 0;
 }
 
 .nav-links li{
@@ -61,25 +38,19 @@ h5 {
 }
 
 .header-text{
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
-    text-decoration: none;
     letter-spacing: 3px;
-    font-weight: bold;
     font-size:10px;
     padding: 5px;
 }
 
 .nav-links a:hover{
-    color: red;
+    color: rgba(255,0,0,1);
     text-decoration: none;
 }
 
 .burger{
     display: none;
     cursor: pointer;
-    margin: 0;
-    position: absolute;
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
@@ -88,7 +59,6 @@ h5 {
 .burger div{
     width: 25px;
     height: 3px;
-    background-color: rgb(226, 226, 226);
     margin: 5px;
     transition: all 0.3s ease;
 }

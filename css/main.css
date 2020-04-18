@@ -1,17 +1,15 @@
- /*
-     Global
-     */
 
+/* Global */
 
 *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body{
-        overflow-x:hidden;
-    }
+    overflow-x:hidden;
+}
 
 body, html{
   height: 100%;
@@ -20,93 +18,4 @@ body, html{
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.8em;
-  color: #666
-}
-
-h4, h5{
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.section-img{
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7{
-  position: absolute;
-  opacity: 0.70;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: inherit;
-  min-width: inherit;
-}
-
-.pimg1{
-  background-image: url('../images/old/hubble-01.jpg');
-}
-
-.pimg2{
-  background-image: url('../images/hobbies-front/AJH-NB-20180122-008-001-0002-JCAM02.jpg');
-  background-position: top;
-}
-
-.pimg3{
-  background-image: url('../images/architecture/Section\ -\ Perspective.jpg');
-}
-
-.pimg4{
-  background-image: url('../images/old/hubble-03.jpg');
-}
-
-.pimg5{
-  background-image: url('../images/coding/pexels-photo-169573.jpeg');
-}
-
-.pimg6{
-  background-image: url('../images/contact-me/IMG_20190413_162300.jpg');
-}
-
-.pimg7{
-  background-image: url('../images/IMG-20190506-WA0006.jpg');
-}
-
-.section{
-  text-align: center;
-  padding: 50px 80px;
-}
-
-.section-light{
-  background-color: #f4f4f4;
-  color: #666;
-}
-
-.section-dark{
-  background-color: #282e34;
-  color: #ddd;
-}
-
-.ptext{
-  text-align: center;
-  color: #000;
-  font-size: 27px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  z-index: 2;
-}
-
-.ptext .border{
-  background-color: rgba(40, 46, 52, 0.70);
-  color: #fff;
-  padding: 20px;
-  z-index: 1;
-}
-
-.ptext .border.trans{
-  background-color: transparent;
 }

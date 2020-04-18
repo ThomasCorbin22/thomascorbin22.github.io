@@ -34,9 +34,9 @@ function scrollGrowHobbies() {
 }
 
 function animationOnScrollBlog() {
-    animationOnScroll("daily-blog", "animated", "rotateInDownRight")
+    animationOnScroll("daily-blog", "animated", "rotateInDownRight", 577)
 }
 
 function animationOnScrollContact() {
-    animationOnScroll("contact-me", "animated", "bounceIn")
+    animationOnScroll("contact-me", "animated", "bounceIn", 0)
 }

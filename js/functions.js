@@ -200,7 +200,7 @@ function splatterTimeClose() {
 }
 
 // Change image and text on click
-function clickChange(title, para1, para2, inputSmallImg) {
+function clickChange(title, sub, para1, para2, inputSmallImg) {
     let ptag = document.getElementsByClassName("architecture-text-change");
     let smallImg = document.getElementById(inputSmallImg)
     let largeImg = document.getElementsByClassName("architecture-img-large-hidden");
@@ -208,8 +208,9 @@ function clickChange(title, para1, para2, inputSmallImg) {
 
     smallImg.addEventListener('click', () => {
         ptag[0].innerHTML = title;
-        ptag[1].innerHTML = para1;
-        ptag[2].innerHTML = para2;
+        ptag[1].innerHTML = sub;
+        ptag[2].innerHTML = para1;
+        ptag[3].innerHTML = para2;
 
         largeImg[0].src = smallImg.src;
     });
@@ -218,7 +219,7 @@ function clickChange(title, para1, para2, inputSmallImg) {
 // Resize the horizontal and vertical rules based on 
 function setLineDimensions() {
     let div = document.getElementById("column-line-resize");
-    let divWidth = div.offsetWidth;
+    let divWidth = div.offsetWidth - 30;
     let divHeight = div.offsetHeight;
 
     let verticalLine = document.getElementsByClassName("vl");
@@ -292,13 +293,13 @@ function ajax(method, url, data, success, error) {
 }
 
 // Make animate CSS start on scroll
-function animationOnScroll(element, animationName1, animationName2) {
+function animationOnScroll(element, animationName1, animationName2, screenWidth) {
     const node = document.getElementsByClassName(element);
 
     let introPosition = node[0].getBoundingClientRect().top;
     let screenPosition = window.innerHeight;
 
-    if (introPosition < screenPosition / 2) {
+    if (introPosition < screenPosition / 2 && screen.width > screenWidth) {
         for (let item of node) {
             console.log(animationName1, animationName2)
             item.classList.add(animationName1, animationName2);
