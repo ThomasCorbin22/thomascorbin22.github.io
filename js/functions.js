@@ -55,10 +55,10 @@ function scrollAppear(inputHidden, inputActive) {
 
     for (let element of welcomeText) {
 
-        let introPosition = element.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight;
+        let toTopOfWindow = element.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
 
-        if (introPosition < screenPosition / 1.25) {
+        if (toTopOfWindow < windowHeight / 1.25) {
             element.classList.add(inputActive);
         }
     }
@@ -68,10 +68,10 @@ function scrollAppear(inputHidden, inputActive) {
 function scrollSlide(start, inter, end) {
     const scrollImg = document.getElementsByClassName(start);
 
-    let introPosition = scrollImg[0].getBoundingClientRect().top;
-    let screenPosition = window.innerHeight;
+    let toTopOfWindow = scrollImg[0].getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
 
-    if (introPosition < screenPosition / 1.5) {
+    if (toTopOfWindow < windowHeight / 1.5) {
         for (let i = 1; i < scrollImg.length + 1; i++) {
             setTimeout(function () {
                 scrollImg[scrollImg.length - i].classList.add(inter);
@@ -87,10 +87,10 @@ function scrollSlide(start, inter, end) {
 function scrollSlideReverse(start, inter, end) {
     const scrollImg = document.getElementsByClassName(start);
 
-    let introPosition = scrollImg[0].getBoundingClientRect().top;
-    let screenPosition = window.innerHeight;
+    let toTopOfWindow = scrollImg[0].getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
 
-    if (introPosition < screenPosition / 1) {
+    if (toTopOfWindow < windowHeight / 1) {
         for (let i = 1; i < scrollImg.length + 1; i++) {
             setTimeout(function () {
                 scrollImg[i - 1].classList.add(inter);
@@ -106,10 +106,10 @@ function scrollSlideReverse(start, inter, end) {
 function scrollGrow(start, end) {
     const hobbiesImg = document.getElementsByClassName(start);
 
-    let introPosition = hobbiesImg[0].getBoundingClientRect().top;
-    let screenPosition = window.innerHeight;
+    let toTopOfWindow = hobbiesImg[0].getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
 
-    if (introPosition < screenPosition / 1.5) {
+    if (toTopOfWindow < windowHeight / 1.5) {
         hobbiesImg[0].classList.add(end);
     }
 }
@@ -225,10 +225,10 @@ function setLineDimensions() {
     let verticalLine = document.getElementsByClassName("vl");
     let horizontalLine = document.getElementsByClassName("hl");
 
-    let introPosition = horizontalLine[0].getBoundingClientRect().top;
-    let screenPosition = window.innerHeight;
+    let toTopOfWindow = horizontalLine[0].getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
 
-    if (introPosition < screenPosition / 1.5) {
+    if (toTopOfWindow < windowHeight / 1.5) {
         for (let element of verticalLine) {
             element.style.height = `${divHeight}px`;
         }
@@ -296,10 +296,10 @@ function ajax(method, url, data, success, error) {
 function animationOnScroll(element, animationName1, animationName2, screenWidth) {
     const node = document.getElementsByClassName(element);
 
-    let introPosition = node[0].getBoundingClientRect().top;
-    let screenPosition = window.innerHeight;
+    let toTopOfWindow = node[0].getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
 
-    if (introPosition < screenPosition / 2 && screen.width > screenWidth) {
+    if (toTopOfWindow < windowHeight / 2 && screen.width > screenWidth) {
         for (let item of node) {
             console.log(animationName1, animationName2)
             item.classList.add(animationName1, animationName2);
