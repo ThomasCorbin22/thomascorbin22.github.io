@@ -301,7 +301,6 @@ function animationOnScroll(element, animationName1, animationName2, screenWidth)
 
     if (toTopOfWindow < windowHeight / 2 && screen.width > screenWidth) {
         for (let item of node) {
-            console.log(animationName1, animationName2)
             item.classList.add(animationName1, animationName2);
         }
     }

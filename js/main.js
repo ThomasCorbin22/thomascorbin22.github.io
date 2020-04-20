@@ -40,7 +40,7 @@ window.addEventListener('focus', setDivHeight);
 window.addEventListener('scroll', setLineDimensions);
 window.addEventListener('resize', setLineDimensions);
 window.addEventListener('scroll', animationOnScrollBlog);
-window.addEventListener('scroll', animationOnScrollContact);
+// window.addEventListener('scroll', animationOnScrollContact);
 window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
@@ -79,3 +79,5 @@ clickChange(architectureTitle5, architectureSubTitle5, architecturePara5a, archi
 var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 300
 });
+
+AOS.init();

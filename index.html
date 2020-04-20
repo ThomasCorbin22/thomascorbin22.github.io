@@ -8,14 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta name="theme-color" content="#f6e8ea">
 
-    <link href="css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="css/boilerplate.css">
+    <link rel="stylesheet" href="css/vendor/lightbox.css"/>
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/boilerplate.css">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/backgroundimg.css">
     <link rel="stylesheet" href="css/colours.css">
@@ -412,7 +413,12 @@
 
     <section class="py-5 px-3 section-full background-dark text-center off-white">
         <div class="container-fluid">
-            <div class="row contact-me">
+            <div class="row contact-me"data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center">
                 <div class="col-md-6">
                     <div class="row">
                         <div>
@@ -525,16 +531,15 @@
         </div>
     </footer>
 
-    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-    <script src="js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="js/lightbox.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script src="js/vendor/jquery-3.5.0.min.js"></script>
+    <script src="js/vendor/lightbox.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+
     <script src="js/plugins.js"></script>
     <script src="js/variables.js"></script>
     <script src="js/functions.js"></script>
