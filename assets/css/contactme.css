@@ -1,0 +1,76 @@
+
+/* Contact Me */
+
+.contact-me{
+  opacity: 0;
+}
+
+.icon-map{
+  width: 4vw;
+  height: 4vw;
+}
+
+.icon-phone{
+  width: 4vw;
+  height: 4vw;
+}
+
+.icon-envelope{
+  width: 4vw;
+  height: 4vw;
+}
+
+.md-form-control {
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  font-size: 14px;
+  width: 100%
+}
+
+input[type=text]:focus{
+  outline: 1px solid rgba(255,255,255, 1);
+}
+
+input[type=email]:focus{
+  outline: 1px solid rgba(255,255,255, 1);
+}
+
+textarea[type=text]:focus{
+  outline: 1px solid rgba(255,255,255, 1);
+}
+
+.height-36{
+  height: 36px;
+}
+
+.height-72{
+  height: 72px;
+}
+
+.btn-primary{
+  border: 1px solid rgba(158,158,158,1);
+}
+
+.btn-primary:hover{
+  background-color: rgba(158,158,158,1);
+  border: 1px solid rgba(158,158,158,1);
+}
+
+.btn-primary:focus{
+  background-color: rgba(62,62,62,1) !important;
+  border: 1px solid rgba(158,158,158,1) !important;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.btn-primary:active{
+  background-color: rgba(158,158,158,1) !important;
+  border: 1px solid rgba(158,158,158,1) !important;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.contact-info-text{
+  font-size: 80%;
+  line-height: 110%;
+}
