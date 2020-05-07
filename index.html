@@ -266,7 +266,7 @@
     <section class="w-100 py-5 px-3 section-half background-light text-center light-grey">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4 text-left">
+                <div class="col-lg-4 text-left pl-3">
                     <div class="row">
                         <h4 class="text-hidden pr-3 architecture-text-change architecture-title ml-0">Sentosa-Brani
                             Masterplan</h4>
@@ -433,18 +433,20 @@
                     from (such as transform: translateY(50px)). The active class should style the item in its final
                     location with it unhidden.Then use javascript to change between the classes on scroll:</p>
                 <hr class="my-4">
-                <p class="link-red text-left pl-3">function scrollEffect(){</p>
-                <p class="link-red text-left pl-3">&emsp;&emsp;const hiddenClass = document.getElementsByClassName
-                    ("hidden-class")[0];</p>
-                <p class="link-red text-left pl-3">&emsp;&emsp;let distanceToTopOfScreen =
-                    hiddenClass.getBoundingClientRect() .top;</p>
-                <p class="link-red text-left pl-3">&emsp;&emsp;let screenHeight = window.innerHeight;</p>
-                <p class="link-red text-left pl-3">&emsp;&emsp;if (distanceToTopOfScreen &#60 screenHeight / 2){ </p>
-                <p class="link-red text-left pl-3">&emsp;&emsp;&emsp;&emsp;hiddenClass.classList.add("active-class");
-                </p>
-                <p class="link-red text-left pl-3">&emsp;&emsp;}</p>
-                <p class="link-red text-left pl-3">}</p>
-                <p class="link-red text-left pl-3">window.addEventListener('scroll', scrollEffect);</p>
+                <div class='pl-5'>
+                    <p class="link-red text-left pl-3">function scrollEffect(){</p>
+                    <p class="link-red text-left pl-3">&emsp;&emsp;const hiddenClass = document.getElementsByClassName
+                        ("hidden-class")[0];</p>
+                    <p class="link-red text-left pl-3">&emsp;&emsp;let distanceToTopOfScreen =
+                        hiddenClass.getBoundingClientRect() .top;</p>
+                    <p class="link-red text-left pl-3">&emsp;&emsp;let screenHeight = window.innerHeight;</p>
+                    <p class="link-red text-left pl-3">&emsp;&emsp;if (distanceToTopOfScreen &#60 screenHeight / 2){ </p>
+                    <p class="link-red text-left pl-3">&emsp;&emsp;&emsp;&emsp;hiddenClass.classList.add("active-class");
+                    </p>
+                    <p class="link-red text-left pl-3">&emsp;&emsp;}</p>
+                    <p class="link-red text-left pl-3">}</p>
+                    <p class="link-red text-left pl-3">window.addEventListener('scroll', scrollEffect);</p>
+                </div>
                 <hr class="my-4">
                 <p class="link-red text-left">In fact the same technique can be applied across a variety of effects.
                     Just set the
