@@ -299,7 +299,7 @@ function animationOnScroll(element, animationName1, animationName2, screenWidth)
     let toTopOfWindow = node[0].getBoundingClientRect().top;
     let windowHeight = window.innerHeight;
 
-    if (toTopOfWindow < windowHeight / 2 && screen.width > screenWidth) {
+    if (toTopOfWindow < windowHeight / 3 && screen.width > screenWidth) {
         for (let item of node) {
             item.classList.add(animationName1, animationName2);
         }

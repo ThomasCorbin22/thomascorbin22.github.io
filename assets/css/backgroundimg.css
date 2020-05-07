@@ -26,30 +26,30 @@
 }
 
 .p-img1{
-  background-image: url('../images/old/hubble-01.jpg');
+  background-image: url(../images/old/hubble-01.jpg);
 }
 
 .p-img2{
-  background-image: url('../images/hobbies-front/AJH-NB-20180122-008-001-0002-JCAM02.jpg');
+  background-image: url(../images/hobbies-front/AJH-NB-20180122-008-001-0002-JCAM02.jpg);
   background-position: top;
 }
 
 .p-img3{
-  background-image: url('../images/architecture/Section\ -\ Perspective.jpg');
+  background-image: url(../images/architecture/Section\ -\ Perspective.jpg);
 }
 
 .p-img4{
-  background-image: url('../images/old/hubble-03.jpg');
+  background-image: url(../images/old/hubble-03.jpg);
 }
 
 .p-img5{
-  background-image: url('../images/coding/pexels-photo-169573.jpeg');
+  background-image: url(../images/coding/pexels-photo-169573.jpeg);
 }
 
 .p-img6{
-  background-image: url('../images/contact-me/IMG_20190413_162300.jpg');
+  background-image: url(../images/contact-me/IMG_20190413_162300.jpg);
 }
 
 .p-img7{
-  background-image: url('../images/IMG-20190506-WA0006.jpg');
+  background-image: url(../images/IMG-20190506-WA0006.jpg);
 }

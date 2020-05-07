@@ -10,15 +10,15 @@
 }
 
 #carousel-img1{
-  background-image: url('../images/welcome-carousel/DSC_0261.jpg');
+  background-image: url(../images/welcome-carousel/DSC_0261.JPG);
 }
 
 #carousel-img2{
-  background-image: url('../images/welcome-carousel/us.jpg');
+  background-image: url(../images/welcome-carousel/us.jpg);
 }
 
 #carousel-img3{
-  background-image: url('../images/welcome-carousel/81606594_10156523291225064_6816703669640101888_o.jpg');
+  background-image: url(../images/welcome-carousel/81606594_10156523291225064_6816703669640101888_o.jpg);
 }
 
 .carousel-background-color{
