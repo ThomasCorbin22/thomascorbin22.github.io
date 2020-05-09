@@ -335,7 +335,6 @@ function scrollSlideHoriontalLine() {
     scrollSlideReverse("hl", "hr-inter", "hr-active")
 }
 
-
 function scrollGrowHobbies() {
     scrollGrow("hobbies-img-hidden", "hobbies-img-active")
 }
